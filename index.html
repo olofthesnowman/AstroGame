@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AstroGame</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="master.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+  </head>
+  <body style="background-color: #000;">
+    <div class="row" style="width: 100%; margin-top:50px;">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <img src="title.png" alt="" style="width:100%;">
+        <p style="text-align:center; color: #fff;">A small school project, by Viktor Olsson TE19B <br> and a vary ghetto looking website</p>
+        <div class="row" style="width: 100%; margin-top:5px;">
+          <div class="col-sm-5">
+            <p style="text-align: center; color: #fff;">Get the source code: <a href="#">GitHub</a></p><br>
+
+          </div>
+          <div class="col-sm-2">
+
+          </div>
+          <div class="col-sm-5">
+            <p style="text-align: center; color: #fff;">Get the game: <a href="#">Download (exe)</a></p>
+
+          </div>
+        </div>
+
+        <div class="tabbed">
+
+            <input type="radio" name="tabs" id="tab-nav-1" checked>
+            <label for="tab-nav-1">Leaderboard</label>
+            <input type="radio" name="tabs" id="tab-nav-2">
+            <label for="tab-nav-2">Art</label>
+            <input type="radio" name="tabs" id="tab-nav-3">
+            <label for="tab-nav-3">Music</label>
+
+          <div class="tabs">
+            <div>
+              <h2>Leaderboard</h2>
+              <table class="table table-hover"  style="color:white;">
+                <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Difficulty</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+              </table>
+            </div>
+            <div>
+              <h2>Art</h2>
+              <p>The combined sprite sheet for the game</p>
+              <img src="img/combined.png" alt="da" style="width:100%;">
+            </div>
+            <div>
+              <h2>Music</h2>
+              <br>
+              <h4>1. Main<audio controls="controls" style="width:100%;">
+                <source src="music/main.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+                </audio></h4>
+              <br>
+              <h4>2. Stars</h4>
+              <br>
+              <h4>3. Tensu</h4>
+              </div>
+          </div>
+        </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </body>
+</html>
